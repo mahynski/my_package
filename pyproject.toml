@@ -49,6 +49,10 @@ testpaths = [
     "tests",
 ]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["my-package*"]
+
 [tool.setuptools.dynamic]
 version = {attr = "my-package.__version__"}
 
