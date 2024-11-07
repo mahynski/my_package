@@ -41,7 +41,7 @@ html_static_path = ["_static"]
 pygments_style = "sphinx"
 nbsphinx_execute = "never"  # Always pre-run notebooks and save their output - just display on readthedocs
 # Examples for setting thumbnails for jupyter notebook tiles
-# nbsphinx_kernel_name = 'pychemauth-kernel'
+# nbsphinx_kernel_name = 'my-package-kernel'
 # nbsphinx_thumbnails = {
 #    "jupyter/api/pipelines": "_static/default.png",
 #    "jupyter/api/sharing_models": "_static/default.png",
