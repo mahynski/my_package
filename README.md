@@ -7,3 +7,5 @@ PyPi Package Template
 $ grep -r "my-package" .
 $ sed -i "s/my-package/my-awesome-new-package-name/g"
 ~~~
+
+2. Get coding!
