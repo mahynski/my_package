@@ -5,7 +5,7 @@ PyPi Package Template
 
 ~~~bash
 $ grep -r "my_package" .
-$ sed -i "s/my_package/my_awesome_new_package_name/g"
+$ sed -i "s/my_package/my_awesome_new_package_name/g" original_file.ext # Repeat / loop for all files
 ~~~
 
 2. Get coding!
