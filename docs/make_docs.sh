@@ -1,5 +1,5 @@
 #!/bin/bash
-sphinx-apidoc -o ./ ../my-package/;
+sphinx-apidoc -o ./ ../my_package/;
 make clean html;
 make html;
 
