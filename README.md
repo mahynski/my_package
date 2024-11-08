@@ -30,3 +30,14 @@ $ bash make_docs.sh
 ~~~
 
 Go to [https://about.readthedocs.com/](https://about.readthedocs.com/) to link your repo to build and host the documentation automatically!
+
+Unittests
+===
+
+Build [unittests](https://docs.python.org/3/library/unittest.html) in the `tests/` directory.  The `pyproject.toml` automatically configures pytest to look in `tests/`.  The following will run all unittests in this directory.
+
+~~~bash
+$ python -m pytest
+~~~
+
+The workflows in `.github/workflow` will also run these tests and perform coverage checks using this.
