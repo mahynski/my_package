@@ -5,7 +5,8 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-dynamic = ["version"]
+# dynamic = ["version"]
+version = "0.0.0"
 name = "my-package"
 description="My Awesome New Package"
 authors = [
@@ -53,8 +54,8 @@ testpaths = [
 where = ["."]
 include = ["my-package*"]
 
-[tool.setuptools.dynamic]
-version = {attr = "my-package.__version__"}
+# [tool.setuptools.dynamic]
+# version = {attr = "my-package.__version__"}
 
 [project.urls]
 Repository = "https://github.com/mahynski/my-package.git"
