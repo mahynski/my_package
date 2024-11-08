@@ -7,12 +7,12 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../my-package/"))
+sys.path.insert(0, os.path.abspath("../my_package/"))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "my-package"
+project = "my_package"
 copyright = "2024, Nathan A. Mahynski"
 author = "Nathan A. Mahynski"
 
@@ -41,7 +41,7 @@ html_static_path = ["_static"]
 pygments_style = "sphinx"
 nbsphinx_execute = "never"  # Always pre-run notebooks and save their output - just display on readthedocs
 # Examples for setting thumbnails for jupyter notebook tiles
-# nbsphinx_kernel_name = 'my-package-kernel'
+# nbsphinx_kernel_name = 'my_package-kernel'
 # nbsphinx_thumbnails = {
 #    "jupyter/api/pipelines": "_static/default.png",
 #    "jupyter/api/sharing_models": "_static/default.png",
