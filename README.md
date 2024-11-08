@@ -29,7 +29,7 @@ Adjust the `docs/conf.py` as desired. Then run `docs/make_docs.sh` to setup the 
 $ bash make_docs.sh
 ~~~
 
-Go to [https://about.readthedocs.com/](https://about.readthedocs.com/) to link your repo to build and host the documentation automatically!
+Go to [https://about.readthedocs.com/](https://about.readthedocs.com/) to link your repo to build and host the documentation automatically!  The `.readthedocs.yml` file contains the configuration for this which you can adjust as needed.
 
 Unittests
 ===
@@ -41,3 +41,23 @@ $ python -m pytest
 ~~~
 
 The GitHub workflow in `.github/workflows/python-app.yml` will also run these tests and perform coverage checks using this command.  This workflow is triggered automatically on the main branch, but you can adjust this file so this is automatically triggered on others as well.
+
+Linting
+===
+
+Automatic code linting is provided via [pre-commit](https://pre-commit.com/); refer to the `.pre-commit-config.yaml` file for the specific configuration which you can adjust as needed.
+
+Run pre-commit to lint new code, then commit the changes.
+
+~~~bash
+$ pre-commit run --all-files
+~~~
+
+Best Practices
+===
+
+Other best practices include [typing](https://docs.python.org/3/library/typing.html) - see [mypy](https://mypy-lang.org/).
+
+~~~bash
+$ mypy --ignore-missing-imports my_new_file.py
+~~~
