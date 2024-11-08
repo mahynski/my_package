@@ -5,9 +5,9 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-# dynamic = ["version"]
-version = "0.0.0"
-name = "my-package"
+dynamic = ["version"]
+# version = "0.0.0"
+name = "my_package"
 description="My Awesome New Package"
 authors = [
     {name = "Nathan A. Mahynski", email = "nathan.mahynski@gmail.com"}
@@ -52,12 +52,12 @@ testpaths = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["my-package*"]
+include = ["my_package*"]
 
-# [tool.setuptools.dynamic]
-# version = {attr = "my-package.__version__"}
+[tool.setuptools.dynamic]
+version = {attr = "my_package.__version__"}
 
 [project.urls]
-Repository = "https://github.com/mahynski/my-package.git"
-Documentation = "https://my-package.readthedocs.io/"
-Issues = "https://github.com/mahynski/my-package/issues"
+Repository = "https://github.com/mahynski/my_package.git"
+Documentation = "https://my_package.readthedocs.io/"
+Issues = "https://github.com/mahynski/my_package/issues"
