@@ -65,6 +65,11 @@ Run pre-commit to lint new code, then commit the changes.
 $ pre-commit run --all-files
 ~~~
 
+Citation
+===
+
+Update the CITATION.cff, CODEOWNERS, and pyproject.toml files to include all code authors and maintainers appropriately.
+
 Best Practices
 ===
 
