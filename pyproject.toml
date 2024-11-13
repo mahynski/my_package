@@ -6,7 +6,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 dynamic = ["version"]
-# version = "0.0.0"
 name = "my_package"
 description="My Awesome New Package"
 authors = [
