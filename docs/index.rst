@@ -1,9 +1,8 @@
-.. starlingrt documentation master file, created by
-   sphinx-quickstart on Thu Nov 14 09:34:19 2024.
+.. my_package documentation master file
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-starlingrt documentation
+my_package documentation
 ========================
 
 Add your content using ``reStructuredText`` syntax. See the
