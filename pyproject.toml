@@ -25,20 +25,23 @@ readme = "README.md"
 license = {file = "LICENSE.md"}
 requires-python = ">=3.10"
 dependencies = [
-    "IPython",
-    "ipywidgets",
     "matplotlib==3.7.2",
     "numpy==1.26.4",
     "pandas==2.1.4",  # For Colab
-    "pre-commit==3.3.3",
     "scikit-learn==1.3.0",
     "scipy==1.11.1",
     "seaborn==0.12.2",
     "tqdm==4.66.1",
     "watermark==2.4.3",
-    "pytest==7.4.0",
     "missingno==0.5.2",
     "wandb>=0.17.5",
+    "IPython",
+    "ipywidgets",
+    "ipykernel",
+    "pre-commit==3.3.3",
+    "pytest==7.4.0",
+    "mypy",
+    "sphinx"
 ] 
 
 [project.optional-dependencies]
