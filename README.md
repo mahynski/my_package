@@ -92,4 +92,6 @@ Other best practices include [typing](https://docs.python.org/3/library/typing.h
 $ mypy --ignore-missing-imports my_new_file.py
 ~~~
 
+Consider building a [streamlit](https://streamlit.io/) demo to illustrate the capabilities of the tool.  This can be hosted for free in the [community cloud](https://streamlit.io/cloud).  Refer to their documentation for easy setup, which allows you to put your `app.py` file right here in a public repo, e.g., `streamlit/app.py`.
+
 You can generate a logo or other art using [gemini](https://gemini.google.com/app) or other AI tools. [Note](https://lib.guides.umd.edu/c.php?g=1340355&p=9896961#:~:text=The%20Chicago%20Manual%20of%20Style's,prompt%20that%20generated%20the%20image.) that "the Chicago Manual of Style's website recommends you cite AI-generated images like any other image, while including both the name of the AI tool that generated the image, the company that created the AI, and the prompt that generated the image."
