@@ -1,1 +1,1 @@
-# Templates for sphinx
+Templates for sphinx
