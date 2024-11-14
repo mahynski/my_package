@@ -20,6 +20,8 @@ PyPi Package Template
 $ for file in $(find . -type f -not -path "./.git/*"); do sed -i "s/my_package/my_awesome_new_package/g" $file; done
 ~~~
 
+You should similarly replace all instances of "mahynski" with your GitHub username.
+
 2. Get coding!
 
 Documentation
