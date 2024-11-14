@@ -27,7 +27,7 @@ Documentation
 
 Documentation is stored in the `docs/` folder and is currently set up to use [sphinx](https://www.sphinx-doc.org/en/master/).
 
-First build the `requirements.txt` that will be needed to build the documentation. This is done by running `pip-compile` on the `requirements.in` file.
+First create the `requirements.txt` that will be needed to build the documentation. This is done by running `pip-compile` on the `requirements.in` file.
 
 Be sure to add any additional requirements you add to the `pyproject.toml` file etc. to `requirements.in` also.
 
