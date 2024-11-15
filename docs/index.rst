@@ -20,6 +20,10 @@ documentation for details.
 .. image:: https://zenodo.org/badge/331207062.svg
    :target: https://zenodo.org/badge/latestdoi/331207062
 
+----
+
+Insert introduction, etc. here
+
 License Information
 ###################
 * See `LICENSE.md <https://github.com/mahynski/my_package/blob/main/LICENSE.md>`_ for more information.
