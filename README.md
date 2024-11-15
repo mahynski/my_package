@@ -23,8 +23,8 @@ $ for file in $(find . -type f -not -path "./.git/*"); do sed -i "s/my_package/m
 You should similarly replace all instances of "mahynski" with your GitHub username.
 
 3. Get coding!
-4. Follow [these instructions](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to publish to pypi.
-5. Create a release, then update [Zenodo](https://zenodo.org/) and the corresponding badge in this `README.md` file.
+4. Create a release, then update [Zenodo](https://zenodo.org/) and the corresponding badge in this `README.md` file.
+5. Follow [these instructions](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to publish to pypi.
 
 Documentation
 ===
