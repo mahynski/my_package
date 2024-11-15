@@ -24,6 +24,7 @@ You should similarly replace all instances of "mahynski" with your GitHub userna
 
 3. Get coding!
 4. Follow [these instructions](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to publish to pypi.
+5. Update [Zenodo](https://zenodo.org/) and the corresponding badge.
 
 Documentation
 ===
