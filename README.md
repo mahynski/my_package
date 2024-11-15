@@ -47,7 +47,7 @@ Adjust the `docs/conf.py` as desired. Then run `docs/make_docs.sh` to setup the 
 $ bash make_docs.sh
 ~~~
 
-This comman creates documentation for your package, but you still need to adjust the main landing page (`docs/index.rst`) manually.  Here is a [primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) on reStructured text markup language.
+This command creates documentation for your package, but you still need to adjust the main landing page (`docs/index.rst`) manually.  Here is a [primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) on reStructured text markup language.
 
 Go to [https://about.readthedocs.com/](https://about.readthedocs.com/) to link your repo to build and host the documentation automatically!  The `.readthedocs.yml` file contains the configuration for this which you can adjust as needed.
 
