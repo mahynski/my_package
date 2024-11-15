@@ -22,7 +22,8 @@ $ for file in $(find . -type f -not -path "./.git/*"); do sed -i "s/my_package/m
 
 You should similarly replace all instances of "mahynski" with your GitHub username.
 
-2. Get coding!
+3. Get coding!
+4. Follow [these instructions](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to publish to pypi.
 
 Documentation
 ===
