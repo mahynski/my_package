@@ -69,7 +69,7 @@ $ python -m pytest
 
 The GitHub workflow in `.github/workflows/python-app.yml` will also run these tests and perform coverage checks using this command.  This workflow is triggered automatically on the main branch, but you can adjust this file so this is automatically triggered on others as well.
 
-Code coverage is configured to work with [codecov.io](https://app.codecov.io/); visit their website to enable this for your new project.
+Code coverage is configured to work with [codecov.io](https://app.codecov.io/); visit their website to enable this for your new project.  You will need to update the badges on this `README.md` file and also in the `docs/index.rst` file.
 
 Linting
 ===
