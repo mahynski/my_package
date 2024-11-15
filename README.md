@@ -51,7 +51,7 @@ This command creates documentation for your package, but you still need to adjus
 
 Go to [https://about.readthedocs.com/](https://about.readthedocs.com/) to link your repo to build and host the documentation automatically!  The `.readthedocs.yml` file contains the configuration for this which you can adjust as needed.
 
-Altenatively, you can start the documentation setup fresh using `sphinx-quickstart` in the `docs/` directory:
+Alternatively, you can start the documentation setup fresh using `sphinx-quickstart` in the `docs/` directory:
 
 ~~~bash
 $ sphinx-quickstart
