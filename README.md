@@ -10,7 +10,7 @@
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 -->
 
-PyPi Package Template
+PyPI Package Template
 ===
 
 1. Choose a name that does not exist in [pypi](https://pypi.org/). You can check by going to https://pypi.org/simple/{my_awesome_new_package}; if you recieve a 404 error the name has not been taken.
