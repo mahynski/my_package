@@ -1,7 +1,7 @@
 """
 Unittests template example.
-author: Nathan A. Mahynski
 
+Author: Nathan A. Mahynski
 """
 import unittest
 
