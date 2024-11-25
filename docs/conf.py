@@ -32,10 +32,16 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
+# html_logo = "_static/my_logo.png" # SPECIFY YOUR LOGO LINK HERE
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "mahynski", # Username
+    "github_repo": "my_package", # Repo name
+    "github_version": "main", # Version
+    "conf_py_path": "docs/", # Path in the checkout to the docs root
+}
 html_theme = "sphinx_book_theme"  #'sphinx_rtd_theme'
 html_static_path = ["_static"]
 pygments_style = "sphinx"
