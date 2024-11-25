@@ -1,6 +1,6 @@
 """
 Unittests
-author: Nathan A. Mahynski
 
+Author: Nathan A. Mahynski
 """
 
