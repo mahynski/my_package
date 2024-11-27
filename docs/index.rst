@@ -34,3 +34,16 @@ License Information
    :maxdepth: 2
    :caption: Contents:
 
+
+.. toctree::
+   :maxdepth: 3
+   :caption: API Reference
+
+   modules
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
