@@ -106,7 +106,7 @@ Logo
 
 You can generate a logo or other art using [Google Gemini](https://gemini.google.com/app) or other AI tools. [Note](https://lib.guides.umd.edu/c.php?g=1340355&p=9896961#:~:text=The%20Chicago%20Manual%20of%20Style's,prompt%20that%20generated%20the%20image.) that "the Chicago Manual of Style's website recommends you cite AI-generated images like any other image, while including both the name of the AI tool that generated the image, the company that created the AI, and the prompt that generated the image." Modify the `html_logo` tag in the `docs/conf.py` to point to the logo.
 
-The logo for this repository (`docs/_static/logo.png`) was generated using Google Gemini on Nov. 28, 2024 with the prompt "Make a logo inspired by code as a template for python projects."
+The logo for this repository (`docs/_static/logo.png`) was generated using Google Gemini (Imagen 3) on Nov. 28, 2024 with the prompt "Make a logo inspired by code as a template for python projects."
 
 Citation
 ---
