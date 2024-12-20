@@ -74,7 +74,7 @@ $ python -m pytest
 
 The GitHub workflow in `.github/workflows/python-app.yml` will also run these tests and perform coverage checks using this command.  This workflow is triggered automatically on the main branch, but you can adjust this file so this is automatically triggered on others as well.
 
-Code coverage is configured to work with [codecov.io](https://app.codecov.io/); visit their website to enable this for your new project.  Add your codecov token (`CODECOV_TOKEN`) to this repo [as a secret](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).  Then update the badge in this `README.md` file and in the `docs/index.rst` file.
+Code coverage is configured to work with [codecov.io](https://app.codecov.io/); visit their website to enable this for your new project.  Add your codecov *repository* token (`CODECOV_TOKEN`) to this repo [as a secret](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).  Then update the badge in this `README.md` file and in the `docs/index.rst` file.
 
 Linting
 ---
