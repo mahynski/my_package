@@ -13,6 +13,8 @@
 PyPI Package Template Instructions
 ===
 
+<img src="docc/img/logo_transparent.png" align="right" width=200 />
+
 1. Choose a name that does not exist in [pypi](https://pypi.org/). You can check by going to https://pypi.org/simple/{my_awesome_new_package}; if you recieve a 404 error the name has not been taken.
 2. Replace all "my_package" names, strings, etc. in this repo with your desired package name (e.g., "my_awesome_new_package").  The command below makes this simple; run this after cloning the repo locally.
 
