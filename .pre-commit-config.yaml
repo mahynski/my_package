@@ -14,21 +14,14 @@ repos:
     -   id: check-yaml
     -   id: debug-statements
     -   id: requirements-txt-fixer
-
-      #-   repo: https://github.com/pycqa/isort
-      #    rev: 5.11.5
-      #    hooks:
-      #    -   id: isort
-      #        args: ["--profile", "black", "--filter-files"]
-      #        language: python
-      #        types: [python]
--   repo: https://github.com/psf/black
-    rev: 22.8.0
-    hooks:
-    -   id: black
-        args: ["--line-length", "80"]
-        language: python
-        types: [python]
+-    repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.9 # Ruff version.
+    hooks: # Run the linter.
+    -   id: ruff
+        types_or: [ python, pyi ]
+        args: [ --fix ]
+    -   id: ruff-format # Run the formatter.
+        types_or: [ python, pyi ]
 -   repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0
     hooks:
