@@ -22,7 +22,13 @@ PyPI Package Template Instructions
 $ for file in $(find . -type f -not -path "./.git/*"); do sed -i "s/my_package/my_awesome_new_package/g" $file; done
 ~~~
 
-You should similarly replace all instances of "mahynski" with your GitHub username.
+You should similarly replace all instances of "mahynski" with your GitHub username.  Also, rename the `my_package` directory to match your chosen name.
+
+~~~bash
+$ mv my_package/ my_awesome_new_package/ 
+$ git add my_awesome_new_package/
+$ git commit -m "created my_awesome_new_package" .
+~~~
 
 3. Get coding! Follow the instructions below concerning Documentation, etc. for good coding practices.  When you are ready to publish the code, proceed to step 4.
 4. Bump the [version](https://semver.org/) appropriately in "my_package/__init__.py" and in the CITATION.cff file.
@@ -32,6 +38,20 @@ You should similarly replace all instances of "mahynski" with your GitHub userna
 
 Best Practices
 ===
+
+Environment
+---
+
+Create a conda/mamba environment then create an editable install so you can easily test and modify things during development.
+
+~~~bash
+$ mamba create -n awesome_env python=3.10
+$ mamba activate awesome_env
+$ cd my_awesome_new_package
+$ pip install -e . # Local installation
+$ python -m ipykernel install --user --name=awesome_env # Install kernel
+$ jupyter notebook --port 4321 --ip='*' --NotebookApp.token='' --NotebookApp.password='' # Launch jupyter server
+~~~
 
 Documentation
 ---
