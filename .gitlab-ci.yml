@@ -1,0 +1,20 @@
+# If using GitLab instead of GitHub
+# https://medium.com/swlh/automate-testing-with-gitlab-pipelines-4d35c72c18a
+default:
+    image: python:3.10
+    before_script:
+       - apt-get update
+       - apt-get install -y python3-pip
+       - pip install --upgrade pip
+       - pip install flake8 pytest coverage
+stages:
+    - install
+    - test
+install:
+    script:
+        - pip install .
+test:
+    script:
+        - coverage run -m pytest
+        - coverage report
+    coverage: '/TOTAL.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
