@@ -38,7 +38,7 @@ dependencies = [
     "scipy>=1.13.1",
     "seaborn>=0.13.0",
     "tqdm>=4.67.3",
-    "watermark>=2.4.3",
+    "watermark>=2.6.0",
     "missingno>=0.5.2",
     "wandb>=0.26.1",
 ]
