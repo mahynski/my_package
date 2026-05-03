@@ -1,20 +1,22 @@
-# If using GitLab instead of GitHub
+# Optional GitLab CI mirror of `.github/workflows/python-app.yml`.
 # https://medium.com/swlh/automate-testing-with-gitlab-pipelines-4d35c72c18a
 default:
-    image: python:3.10
+    image: python:3.12
     before_script:
-       - apt-get update
-       - apt-get install -y python3-pip
-       - pip install --upgrade pip
-       - pip install flake8 pytest coverage
+       - python -m pip install --upgrade pip
+       - pip install -e ".[test]"
 stages:
-    - install
     - test
-install:
-    script:
-        - pip install .
 test:
+    parallel:
+        matrix:
+            - PYTHON_VERSION: ["3.10", "3.11", "3.12", "3.13"]
+    image: python:$PYTHON_VERSION
     script:
-        - coverage run -m pytest
-        - coverage report
+        - pytest --cov --cov-report=term --cov-report=xml
     coverage: '/TOTAL.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+    artifacts:
+        reports:
+            coverage_report:
+                coverage_format: cobertura
+                path: coverage.xml

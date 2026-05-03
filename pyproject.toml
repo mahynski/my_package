@@ -16,18 +16,24 @@ maintainers = [
 ]
 keywords = []
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 1 - Planning",
     "Intended Audience :: Science/Research",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 readme = "README.md"
+# Replace with an SPDX expression (e.g. license = "MIT") once LICENSE.md
+# is populated. See PEP 639.
 license = {file = "LICENSE.md"}
 requires-python = ">=3.10"
 dependencies = [
     "matplotlib>=3.9.0",
     "numpy>=1.26.4",
-    "pandas==2.1.4",  # For Colab
+    "pandas>=2.1.4",
     "scikit-learn>=1.5.0",
     "scipy>=1.13.1",
     "seaborn>=0.13.0",
@@ -35,17 +41,30 @@ dependencies = [
     "watermark>=2.4.3",
     "missingno>=0.5.2",
     "wandb>=0.17.5",
-    "IPython",
-    "ipywidgets",
-    "ipykernel",
-    "pre-commit>=3.3.3",
-    "pytest>=7.4.0",
-    "mypy",
-    "sphinx"
 ]
 
 [project.optional-dependencies]
-all = []
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov",
+]
+docs = [
+    "sphinx",
+    "sphinx-book-theme>=1.0.1",
+    "readthedocs-sphinx-search>=0.3.2",
+    "nbsphinx>=0.9.2",
+    "sphinx_gallery>=0.14.0",
+]
+notebook = [
+    "IPython",
+    "ipywidgets",
+    "ipykernel",
+]
+dev = [
+    "my_package[test,docs,notebook]",
+    "pre-commit>=3.3.3",
+    "mypy",
+]
 
 [tool.pytest.ini_options]
 testpaths = [
