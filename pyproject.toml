@@ -26,20 +26,20 @@ license = {file = "LICENSE.md"}
 requires-python = ">=3.10"
 dependencies = [
     "matplotlib>=3.9.0",
-    "numpy==1.26.4",
+    "numpy>=1.26.4",
     "pandas==2.1.4",  # For Colab
     "scikit-learn>=1.5.0",
-    "scipy==1.13.1",
-    "seaborn==0.12.2",
-    "tqdm==4.66.1",
-    "watermark==2.4.3",
-    "missingno==0.5.2",
+    "scipy>=1.13.1",
+    "seaborn>=0.13.0",
+    "tqdm>=4.66.1",
+    "watermark>=2.4.3",
+    "missingno>=0.5.2",
     "wandb>=0.17.5",
     "IPython",
     "ipywidgets",
     "ipykernel",
-    "pre-commit==3.3.3",
-    "pytest==7.4.0",
+    "pre-commit>=3.3.3",
+    "pytest>=7.4.0",
     "mypy",
     "sphinx"
 ]
