@@ -92,6 +92,15 @@ python -m pytest
 
 Code coverage is wired to [codecov.io](https://app.codecov.io/). Enable the repo there, add your `CODECOV_TOKEN` as a [GitHub Actions secret](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions), and update the badge URL in this `README.md` and in `docs/index.rst` (find it under *Configuration → Badges & Graphs* on codecov).
 
+CI/CD
+---
+
+Three additional workflows keep the repo healthy with no extra setup:
+
+- `.github/workflows/pre-commit.yml` runs the pre-commit hooks on every push and PR to `main`, so lint/format failures are caught in CI rather than only locally.
+- `.github/workflows/codeql.yml` runs GitHub's [CodeQL](https://codeql.github.com/) static-analysis scanner on every push, every PR, and weekly on Mondays. Findings appear under the repo's *Security → Code scanning* tab.
+- `.github/dependabot.yml` opens weekly PRs to update GitHub Actions versions and pip dependencies. Tune the `interval` or `open-pull-requests-limit` if the volume is too high.
+
 Linting and Formatting
 ---
 
