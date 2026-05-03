@@ -17,8 +17,10 @@ documentation for details.
    :target: https://codecov.io/gh/mahynski/my_package
 .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
-.. image:: https://zenodo.org/badge/331207062.svg
-   :target: https://zenodo.org/badge/latestdoi/331207062
+..
+   Uncomment after Zenodo mints a DOI for this repo and replace the badge ID.
+   .. image:: https://zenodo.org/badge/331207062.svg
+      :target: https://zenodo.org/badge/latestdoi/331207062
 
 ----
 
