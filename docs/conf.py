@@ -39,7 +39,9 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-html_logo = "_static/logo.png"  # SPECIFY YOUR LOGO LINK HERE
+# `_static/logo.png` is used by the Sphinx theme; `_static/logo_transparent.png`
+# is what README.md embeds. Keep both in sync (or trim to one) when replacing.
+html_logo = "_static/logo.png"
 html_context = {
     "display_github": True,  # Integrate GitHub
     "github_user": "mahynski",  # Username
@@ -50,7 +52,8 @@ html_context = {
 html_theme = "sphinx_book_theme"  #'sphinx_rtd_theme'
 html_static_path = ["_static"]
 pygments_style = "sphinx"
-nbsphinx_execute = "never"  # Notebooks must be pre-executed locally; RTD just renders the saved output.
+# Notebooks must be pre-executed locally; RTD just renders saved output.
+nbsphinx_execute = "never"
 # Examples for setting thumbnails for jupyter notebook tiles
 # nbsphinx_kernel_name = 'my_package-kernel'
 # nbsphinx_thumbnails = {
