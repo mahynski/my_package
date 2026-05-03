@@ -2,7 +2,7 @@
 fail_fast: false
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v5.0.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -11,38 +11,16 @@ repos:
     -   id: check-docstring-first
     -   id: check-merge-conflict
     -   id: check-symlinks
-    -   id: check-yaml
     -   id: debug-statements
     -   id: requirements-txt-fixer
--    repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.9 # Ruff version.
-    hooks: # Run the linter.
-    -   id: ruff
-        types_or: [ python, pyi ]
-        args: [ --fix ]
-    -   id: ruff-format # Run the formatter.
-        types_or: [ python, pyi ]
--   repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.9
     hooks:
-    -   id: python-use-type-annotations
+    -   id: ruff
+        args: [--fix]
+    -   id: ruff-format
 -   repo: https://github.com/adrienverge/yamllint
-    rev: v1.28.0
+    rev: v1.35.1
     hooks:
     -   id: yamllint
         args: ["-d", "{ignore: .pre-commit-config.yaml}"]
-        language: python
-        types: [yaml]
--   repo: https://github.com/pycqa/pydocstyle
-    rev: 6.1.1
-    hooks:
-    -   id: pydocstyle
-        language: python
-        types: [python]
--   repo: https://github.com/asottile/blacken-docs
-    rev: v1.12.1
-    hooks:
-    -   id: blacken-docs
-        language: python
-        types: [python]
-        additional_dependencies: [black==20.8b1]
