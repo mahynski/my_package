@@ -42,13 +42,13 @@ dependencies = [
     "pytest==7.4.0",
     "mypy",
     "sphinx"
-] 
+]
 
 [project.optional-dependencies]
 all = []
 
 [tool.pytest.ini_options]
-testpaths = [ 
+testpaths = [
     "tests",
 ]
 
