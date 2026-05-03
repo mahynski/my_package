@@ -40,7 +40,7 @@ dependencies = [
     "tqdm>=4.66.1",
     "watermark>=2.4.3",
     "missingno>=0.5.2",
-    "wandb>=0.17.5",
+    "wandb>=0.26.1",
 ]
 
 [project.optional-dependencies]
