@@ -3,14 +3,16 @@ Unittests template example.
 
 Author: Nathan A. Mahynski
 """
+
 import unittest
 
-from my_package import * # Bad form, but just a placeholder example
+import my_package  # noqa: F401
+
 
 class DummyTest(unittest.TestCase):
     """Perform dummy tests."""
-  
-    @classmethod  
+
+    @classmethod
     def setUpClass(self):
         """Set up things for all members of this test class."""
         return
