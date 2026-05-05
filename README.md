@@ -59,6 +59,17 @@ python -m ipykernel install --user --name=awesome_env   # register Jupyter kerne
 jupyter notebook --port 4321                            # launch on localhost (default auth enabled)
 ```
 
+Or, using [uv](https://docs.astral.sh/uv/) (a fast drop-in for `pip` and `venv` from Astral):
+
+```bash
+uv venv awesome_env --python 3.12                       # create virtual env in ./awesome_env
+source awesome_env/bin/activate                         # Windows: awesome_env\Scripts\activate
+cd my_awesome_new_package
+uv pip install -e ".[dev]"                              # editable install with dev/test/docs/notebook extras
+python -m ipykernel install --user --name=awesome_env   # register Jupyter kernel
+jupyter notebook --port 4321                            # launch on localhost (default auth enabled)
+```
+
 The package declares the following extras in `pyproject.toml`:
 
 - `test` — `pytest` + `pytest-cov` (what CI installs)
