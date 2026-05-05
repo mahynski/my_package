@@ -1,22 +1,45 @@
-# Optional GitLab CI mirror of `.github/workflows/python-app.yml`.
-# https://medium.com/swlh/automate-testing-with-gitlab-pipelines-4d35c72c18a
+# KEEP IN SYNC with .github/workflows/python-app.yml and pre-commit.yml.
+# This template ships CI for both GitHub and GitLab. The test stage below is
+# behaviorally equivalent to python-app.yml: same Python matrix (3.10–3.13),
+# same install command (pip install -e ".[test]"), same pytest invocation.
+# Coverage is exported as Cobertura XML (GitLab's native format) instead of
+# uploaded to Codecov.
+#
+# CodeQL has no GitLab equivalent here; if you host on GitLab, consider
+# GitLab's built-in SAST template instead:
+# https://docs.gitlab.com/ee/user/application_security/sast/
+
 default:
-    image: python:3.12
-    before_script:
-       - python -m pip install --upgrade pip
-       - pip install -e ".[test]"
+  interruptible: true  # cancel superseded pipelines, mirroring GH `concurrency`
+
 stages:
-    - test
+  - lint
+  - test
+
+pre-commit:
+  stage: lint
+  image: python:3.12
+  timeout: 10m
+  script:
+    - python -m pip install --upgrade pip
+    - pip install pre-commit
+    - pre-commit run --all-files
+
 test:
-    parallel:
-        matrix:
-            - PYTHON_VERSION: ["3.10", "3.11", "3.12", "3.13"]
-    image: python:$PYTHON_VERSION
-    script:
-        - pytest --cov --cov-report=term --cov-report=xml
-    coverage: '/TOTAL.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
-    artifacts:
-        reports:
-            coverage_report:
-                coverage_format: cobertura
-                path: coverage.xml
+  stage: test
+  timeout: 15m
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.10", "3.11", "3.12", "3.13"]
+  image: python:$PYTHON_VERSION
+  before_script:
+    - python -m pip install --upgrade pip
+    - pip install -e ".[test]"
+  script:
+    - pytest --cov --cov-report=term --cov-report=xml
+  coverage: '/TOTAL.*? (\d+(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml

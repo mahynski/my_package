@@ -70,8 +70,12 @@ python -m ipykernel install --user --name=awesome_env   # register Jupyter kerne
 jupyter notebook --port 4321                            # launch on localhost (default auth enabled)
 ```
 
-The package declares the following extras in `pyproject.toml`:
+The package declares the following extras in `pyproject.toml`. The default
+`dependencies` list is **empty** on purpose — add only what your package
+actually imports. The `science` extra is opt-in so users who don't need it
+aren't forced to install hundreds of MB of wheels.
 
+- `science` — `matplotlib`, `numpy`, `pandas`, `scikit-learn`, `scipy`, `seaborn` with loose floors
 - `test` — `pytest` + `pytest-cov` (what CI installs)
 - `docs` — Sphinx and the theme/extensions used by `docs/conf.py`
 - `notebook` — `IPython`, `ipywidgets`, `ipykernel`
@@ -112,11 +116,22 @@ Code coverage is wired to [codecov.io](https://app.codecov.io/). Enable the repo
 CI/CD
 ---
 
-Three additional workflows keep the repo healthy with no extra setup:
+The template ships CI for **both GitHub and GitLab** so you can host on either
+without rewriting pipelines. The two configs are kept behaviorally equivalent
+for the test stage (same Python matrix, same install command, same coverage
+report). When you change one, **mirror the change in the other**; both files
+have a `KEEP IN SYNC` header pointing at the other.
 
-- `.github/workflows/pre-commit.yml` runs the pre-commit hooks on every push and PR to `main`, so lint/format failures are caught in CI rather than only locally.
-- `.github/workflows/codeql.yml` runs GitHub's [CodeQL](https://codeql.github.com/) static-analysis scanner on every push, every PR, and weekly on Mondays. Findings appear under the repo's *Security → Code scanning* tab.
-- `.github/dependabot.yml` opens weekly PRs to update GitHub Actions versions and pip dependencies. Tune the `interval` or `open-pull-requests-limit` if the volume is too high.
+GitHub-specific workflows (with no GitLab equivalent in this template):
+
+- `.github/workflows/python-app.yml` — test matrix on 3.10–3.13, coverage to Codecov.
+- `.github/workflows/pre-commit.yml` — runs pre-commit hooks on push and PR to `main`.
+- `.github/workflows/codeql.yml` — [CodeQL](https://codeql.github.com/) static analysis on push, PR, and weekly Mondays. Findings appear under *Security → Code scanning*.
+- `.github/dependabot.yml` — weekly PRs to update GitHub Actions and pip dependencies. Tune `interval` or `open-pull-requests-limit` if volume is too high.
+
+GitLab equivalent:
+
+- `.gitlab-ci.yml` — mirrors the test matrix and adds a `pre-commit` job. CodeQL has no GitLab analogue here; if you host on GitLab, consider GitLab's built-in [SAST](https://docs.gitlab.com/ee/user/application_security/sast/) instead.
 
 Linting and Formatting
 ---
