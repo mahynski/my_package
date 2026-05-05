@@ -99,9 +99,25 @@ select = [
     "UP",  # pyupgrade
 ]
 
+[tool.mypy]
+# Permissive defaults so a fresh template checkout passes. Tighten as your
+# code grows: turn on `disallow_untyped_defs = true` once you're ready to
+# require type annotations on public APIs.
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+strict_equality = true
+check_untyped_defs = true
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["my_package*"]
+
+[tool.setuptools.package-data]
+# Ship the PEP 561 marker so downstream consumers see the package's type hints.
+my_package = ["py.typed"]
 
 [tool.setuptools.dynamic]
 version = {attr = "my_package.__version__"}
