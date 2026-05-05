@@ -30,20 +30,22 @@ readme = "README.md"
 # is populated. See PEP 639.
 license = {file = "LICENSE.md"}
 requires-python = ">=3.10"
-dependencies = [
-    "matplotlib>=3.9.0",
-    "numpy>=2.2.6",
-    "pandas>=2.1.4",
-    "scikit-learn>=1.7.2",
-    "scipy>=1.13.1",
-    "seaborn>=0.13.0",
-    "tqdm>=4.67.3",
-    "watermark>=2.6.0",
-    "missingno>=0.5.2",
-    "wandb>=0.26.1",
-]
+# Intentionally empty: this is a template. Add only what your package actually
+# imports at runtime. Heavy science deps live in the `science` extra below so
+# users opt in.
+dependencies = []
 
 [project.optional-dependencies]
+science = [
+    # Loose floors chosen to match Python 3.13 wheel availability on PyPI.
+    # Tighten only when your code actually depends on a newer API.
+    "matplotlib>=3.9",
+    "numpy>=2.1",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "scipy>=1.14",
+    "seaborn>=0.13",
+]
 test = [
     "pytest>=7.4.0",
     "pytest-cov",
@@ -97,9 +99,25 @@ select = [
     "UP",  # pyupgrade
 ]
 
+[tool.mypy]
+# Permissive defaults so a fresh template checkout passes. Tighten as your
+# code grows: turn on `disallow_untyped_defs = true` once you're ready to
+# require type annotations on public APIs.
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+strict_equality = true
+check_untyped_defs = true
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["my_package*"]
+
+[tool.setuptools.package-data]
+# Ship the PEP 561 marker so downstream consumers see the package's type hints.
+my_package = ["py.typed"]
 
 [tool.setuptools.dynamic]
 version = {attr = "my_package.__version__"}

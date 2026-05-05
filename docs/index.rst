@@ -33,11 +33,6 @@ License Information
 * Any mention of commercial products is for information only; it does not imply recommendation or endorsement by `NIST <https://www.nist.gov/>`_.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-.. toctree::
    :maxdepth: 3
    :caption: API Reference
 
