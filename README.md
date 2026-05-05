@@ -128,7 +128,8 @@ GitHub-specific workflows (with no GitLab equivalent in this template):
 
 GitLab equivalent:
 
-- `.gitlab-ci.yml` — mirrors the test matrix and adds a `pre-commit` job. CodeQL has no GitLab analogue here; if you host on GitLab, consider GitLab's built-in [SAST](https://docs.gitlab.com/ee/user/application_security/sast/) instead.
+- `.gitlab-ci.yml` — mirrors the test matrix and adds `pre-commit` and `mypy` jobs. CodeQL has no GitLab analogue here; if you host on GitLab, consider GitLab's built-in [SAST](https://docs.gitlab.com/ee/user/application_security/sast/) instead.
+- **No Dependabot on GitLab.** If you host on GitLab, consider [Renovate](https://docs.renovatebot.com/) (works on both platforms) or replace `.github/dependabot.yml` with a manual update cadence.
 
 Linting and Formatting
 ---

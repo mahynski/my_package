@@ -1,26 +1,15 @@
 """
-Unittests template example.
+Pytest example template.
 
-TODO: Replace this no-op test with real tests for your package. The dummy
-test below exists only to keep the test suite green on a fresh template
+TODO: Replace this with real tests for your package. The trivial test
+below exists only to keep the test suite green on a fresh template
 checkout — coverage numbers it produces are not meaningful.
-
-Author: Nathan A. Mahynski
 """
 
-import unittest
-
-import my_package  # noqa: F401
+import my_package
 
 
-class DummyTest(unittest.TestCase):
-    """Perform dummy tests."""
-
-    @classmethod
-    def setUpClass(cls):
-        """Set up things for all members of this test class."""
-        return
-
-    def test_dummy(self):
-        """Perform a dummy test."""
-        return
+def test_version_is_set():
+    """Sanity check: the package exposes a non-empty version string."""
+    assert isinstance(my_package.__version__, str)
+    assert my_package.__version__

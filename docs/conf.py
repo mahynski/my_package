@@ -5,17 +5,13 @@ For the full list of built-in configuration values, see the documentation:
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
-import datetime
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(".."))
-
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "my_package"
-copyright = f"{datetime.date.today().year}, Nathan A. Mahynski"
+# Hardcoded for reproducible builds. Bump the year manually (or replace with
+# a "{start}–{current}" range) when appropriate.
+copyright = "2026, Nathan A. Mahynski"
 author = "Nathan A. Mahynski"
 
 # -- General configuration ---------------------------------------------------
