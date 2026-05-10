@@ -54,7 +54,7 @@ docs = [
     "sphinx",
     "sphinx-book-theme>=1.0.1",
     "readthedocs-sphinx-search>=0.3.2",
-    "nbsphinx>=0.9.2",
+    "nbsphinx>=0.9.8",
     "sphinx_gallery>=0.14.0",
 ]
 notebook = [
