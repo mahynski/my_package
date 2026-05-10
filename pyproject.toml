@@ -41,7 +41,7 @@ science = [
     # Tighten only when your code actually depends on a newer API.
     "matplotlib>=3.9",
     "numpy>=2.1",
-    "pandas>=2.2",
+    "pandas>=2.3.3",
     "scikit-learn>=1.5",
     "scipy>=1.14",
     "seaborn>=0.13",
