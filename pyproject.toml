@@ -47,7 +47,7 @@ science = [
     "seaborn>=0.13.2",
 ]
 test = [
-    "pytest>=7.4.0",
+    "pytest>=9.0.3",
     "pytest-cov",
 ]
 docs = [
