@@ -1,7 +1,7 @@
 # Refer to: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 # For pytest: https://docs.pytest.org/en/stable/reference/customize.html
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools >= 82.0.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
